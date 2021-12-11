@@ -9,7 +9,7 @@
 
 
 cat >$NETIP <<-EOF
-uci set network.lan.ipaddr='192.168.2.2'                                    # IPv4 地址(openwrt后台地址)
+uci set network.lan.ipaddr='192.168.31.1'                                    # IPv4 地址(openwrt后台地址)
 uci set network.lan.netmask='255.255.255.0'                                 # IPv4 子网掩码
 #uci set network.lan.gateway='192.168.2.1'                                   # IPv4 网关
 #uci set network.lan.broadcast='192.168.2.255'                               # IPv4 广播
@@ -23,7 +23,7 @@ EOF
 
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile            # 选择argon为默认主题
 
-sed -i "s/OpenWrt /${Author} compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
+#sed -i "s/OpenWrt /${Author} compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ           # 增加个性名字 ${Author} 默认为你的github帐号
 
 #sed -i 's/PATCHVER:=4.14/PATCHVER:=4.9/g' target/linux/x86/Makefile                               # x86机型,默认内核4.14，修改内核为4.9
 
